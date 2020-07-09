@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "BuildDebug",
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "windows": {
+        "command": "call \"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\VC\\Auxiliary\\Build\\vcvars64.bat\" && ${cwd}\\buildDebug.bat"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "BuildRelease",
+      "type": "shell",
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "windows": {
+        "command": "call \"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\VC\\Auxiliary\\Build\\vcvars64.bat\" && ${cwd}\\buildRelease.bat"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
